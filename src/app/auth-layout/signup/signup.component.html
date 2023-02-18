@@ -1,0 +1,77 @@
+<div class="row h-100">
+    <div class="col-12 text-center mb-auto px-0">
+        <header class="header">
+            <div class="row">
+                <div class="col-auto">
+                    <a routerLink="/auth/signin" target="_self" class="btn btn-light btn-44">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="col align-self-center">
+                    <h5>Sign up</h5>
+                </div>
+                <div class="col-auto">
+                    <a class="btn btn-light btn-44 invisible"></a>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="col-10 col-md-6 col-lg-5 col-xl-3 mx-auto align-self-center text-center py-4">
+        <form class="has-validation" (keyup.Enter)="signup()">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" [(ngModel)]="user.firstname" placeholder="First Name" id="firstname" name="firstname" [ngClass]="{'is-invalid': signupError.firstname, 'is-valid': !signupError.firstname}" (keyup)="checkFirstname()">
+                <label for="firstname">First name</label>
+                <p class="text invalid-feedback" *ngIf="signupError.firstname">{{signupError.firstname}}</p>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" [(ngModel)]="user.lastname" placeholder="Last Name" id="lastname" name="lastname" (keyup)="checkLastname()" [ngClass]="{'is-invalid': signupError.lastname, 'is-valid': !signupError.lastname}">
+                <label for="lastname">Last name</label>
+                <p class="text invalid-feedback" *ngIf="signupError.lastname">{{signupError.lastname}}</p>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" [(ngModel)]="user.email" placeholder="Email" id="email" name="email" (change)="checkEmail()" [ngClass]="{'is-invalid': signupError.email, 'is-valid': !signupError.email}">
+                <label for="email">Email</label>
+                <p class="text invalid-feedback" *ngIf="signupError.email">{{signupError.email}}</p>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="tel" class="form-control" [(ngModel)]="user.phone" placeholder="Phone" id="phone" name="phone" (change)="checkPhone()" [ngClass]="{'is-invalid': signupError.phone, 'is-valid': !signupError.phone}">
+                <label for="phone">Phone</label>
+                <p class="text invalid-feedback" *ngIf="signupError.phone">{{signupError.phone}}</p>
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-control" id="country" name="country" [(ngModel)]="user.country">
+                    <option value="nigeria" selected>Nigeria</option>
+                </select>
+                <label for="country">Country</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" [(ngModel)]="user.password" placeholder="Password" id="password" name="password" (keyup)="checkPassword()" [ngClass]="{'is-invalid': signupError.password, 'is-valid': !signupError.password}">
+                <label for="password">Password</label>
+                <p class="text invalid-feedback" *ngIf="signupError.password">{{signupError.password}}</p>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control"  [(ngModel)]="user.password2" placeholder="Confirm Password" id="confirmpassword" name="confirmpassword" (keyup)="checkPassword()" [ngClass]="{'is-invalid': signupError.password2, 'is-valid': !signupError.password2}">
+                <label for="confirmpassword">Confirm Password</label>
+                <p class="text invalid-feedback" *ngIf="signupError.password2">{{signupError.password2}}</p>
+            </div>
+            <p class="mb-3"><span class="text-muted">By clicking on Signup button, you confirm that you agree to our </span>
+                <a routerLink="https://cooplilyful.com/Terms">Terms and Conditions</a>
+            </p>
+            <button (click)="signup()" type="button" class="btn btn-lg btn-default w-100 mb-4 shadow">
+                Sign up
+            </button>
+        </form>
+    </div>
+    <div class="col-12 text-center mt-auto d-none">
+        <div class="row justify-content-center footer-info">
+            <div class="col-auto">
+                <p class="text-muted">Or you can continue with </p>
+            </div>
+            <div class="col-auto ps-0">
+                <a routerLink="/#" class="p-1"><i class="bi bi-twitter"></i></a>
+                <a routerLink="/#" class="p-1"><i class="bi bi-google"></i></a>
+                <a routerLink="/#" class="p-1"><i class="bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

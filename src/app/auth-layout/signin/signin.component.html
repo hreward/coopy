@@ -1,0 +1,63 @@
+<div class="row h-100 overflow-auto">
+    <div class="col-12 text-center mb-auto px-0">
+        <header class="header">
+            <div class="row">
+                <div class="col-auto"></div>
+                <div class="col">
+                    <div class="logo-small">
+                        <img src="assets/img/logo.png" alt="">
+                        <h5>Coop</h5>
+                    </div>
+                </div>
+                <div class="col-auto"></div>
+            </div>
+        </header>
+    </div>
+    <div class="col-10 col-md-6 col-lg-5 col-xl-3 mx-auto align-self-center text-center py-4">
+        <h1 class="mb-4 text-color-theme">Sign in</h1>
+        <form class="needs-validation" (keyup.Enter)="signin()">
+            <div class="form-group form-floating mb-3 is-valid">
+                <input type="text" class="form-control" id="email" name="email" [(ngModel)]="email"  placeholder="Username">
+                <label class="form-control-label" for="email">Username</label>
+            </div>
+
+            <div class="form-group form-floating is-valid mb-3">
+                <input type="password" class="form-control " id="password" name="password" [(ngModel)]="password" placeholder="Password">
+                <label class="form-control-label" for="password">Password</label>
+            </div>
+            <p class="mb-3 text-center">
+                <a routerLink="/auth/forgotpassword" class="">
+                    Forgot your password?
+                </a>
+            </p>
+
+            <ng-container *ngIf="fetchingData; else elseTemplate">
+                <button (click)="signin()" type="button" disabled class="btn btn-lg btn-default w-100 mb-4 shadow">
+                    Sign in
+                </button>
+            </ng-container>
+            <ng-template #elseTemplate>
+                <button (click)="signin()" type="button" class="btn btn-lg btn-default w-100 mb-4 shadow">
+                    Sign in
+                </button>
+            </ng-template>
+        </form>
+        <p class="mb-2 text-muted">Don't have account?</p>
+        <a routerLink="/auth/signup" class="">
+            Sign up <i class="bi bi-arrow-right"></i>
+        </a>
+
+    </div>
+    <div class="col-12 text-center mt-auto d-none">
+        <div class="row justify-content-center footer-info">
+            <div class="col-auto">
+                <p class="text-muted">Or you can continue with </p>
+            </div>
+            <div class="col-auto ps-0">
+                <a routerLink="#" class="p-1"><i class="bi bi-twitter"></i></a>
+                <a routerLink="#" class="p-1"><i class="bi bi-google"></i></a>
+                <a routerLink="#" class="p-1"><i class="bi bi-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+</div>

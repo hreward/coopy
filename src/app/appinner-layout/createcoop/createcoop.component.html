@@ -1,0 +1,281 @@
+<div *ngIf="firstStage">
+<!-- coop information -->
+    <form #firstStageForm="ngForm" (ngSubmit)="save(firstStageForm)"  class="has-validation" [ngClass]="{'was-validated': firstStageForm.submitted}">
+        <div class="row mb-3">
+            <div class="col-12 col-md-6 col-lg-4 text-center">
+                <label for="logoupload">Coop Logo</label>
+                <div class="form-group form-floating">
+                    <input ngModel type="file" name="logo" hidden class="form-control d-none" #logoupload id="logoupload" accept="image/*">
+                    <img class="img-fluid rounded rounded-5 border border-3" alt="Click to upload" width="75px" height="75px" src="" (click)="logoupload.click()">
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col">
+                <h6>Basic Information</h6>
+            </div>
+        </div>
+        <div class="row h-100 mb-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group form-floating  mb-3">
+                    <input ngModel required type="text" name="name" class="form-control" value="" placeholder="Name" id="name">
+                    <label for="name">Co-operative Name</label>
+                    <p class="text invalid-feedback" *ngIf="formError['name']">{{formError['name']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group form-floating  mb-3">
+                    <input ngModel required type="text" name="regId" class="form-control" value="" placeholder="regId" id="regno">
+                    <label for="regId">Registration No.</label>
+                    <p class="text invalid-feedback" *ngIf="formError['regId']">{{formError['regId']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group form-floating mb-3">
+                    <textarea ngModel required class="form-control" id="coremission" name="coremission" placeholder="Financial goal"></textarea>
+                    <label for="coremission">Co-operative core mission</label>
+                    <p class="text invalid-feedback" *ngIf="formError['coremission']">{{formError['coremission']}}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- add edit address form -->
+        <div class="row mb-3">
+            <div class="col">
+                <h6>Address</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="form-floating mb-3">
+                    <select ngModel required class="form-control" id="country" name="country">
+                        <option value="nigeria" selected>Nigeria (+234)</option>
+                    </select>
+                    <label for="country">Country</label>
+                    <p class="text invalid-feedback" *ngIf="formError['country']">{{formError['country']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="form-group form-floating">
+                    <input ngModel required type="text" name="state" class="form-control" value="" id="state"
+                        placeholder="Select State">
+                    <label class="form-control-label" for="state">State</label>
+                    <p class="text invalid-feedback" *ngIf="formError['state']">{{formError['state']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="form-group form-floating">
+                    <input ngModel required type="text" name="city" class="form-control" value="" id="city" placeholder="City">
+                    <label class="form-control-label" for="city">City</label>
+                    <p class="text invalid-feedback" *ngIf="formError['city']">{{formError['city']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="form-group form-floating">
+                    <input ngModel required type="text" name="address" class="form-control" value="" id="address"
+                        placeholder="Address Line">
+                    <label class="form-control-label" for="address">Address Line</label>
+                    <p class="text invalid-feedback" *ngIf="formError['address']">{{formError['address']}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row mb-3">
+            <div class="col">
+                <h6>Approvals</h6>
+                <p class="text small">Number of executives to approve an event</p>
+            </div>
+        </div>
+        <div class="row h-100 mb-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group mb-3">
+                    <label for="reg-approval">New member registration</label>
+                    <select ngModel required class="form-control" name="regApproval" id="reg-approval" >
+                        <option value="0">None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <p class="text invalid-feedback" *ngIf="formError['regApproval']">{{formError['regApproval']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group mb-3">
+                    <label for="withdrawal-approval">Member's fund withdrawal</label>
+                    <select ngModel required class="form-control" id="withdrawal-approval" name="withdrawalApproval">
+                        <option value="0">None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <p class="text invalid-feedback" *ngIf="formError['withdrawalApproval']">{{formError['withdrawalApproval']}}</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="form-group mb-3">
+                    <label for="exit-approval">Member's Exit</label>
+                    <select ngModel required class="form-control" id="exit-approval" name="exitApproval">
+                        <option value="0">None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <p class="text invalid-feedback" *ngIf="formError['exitApproval']">{{formError['exitApproval']}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Visibility settings -->
+        <div class="row mb-3">
+            <div class="col">
+                <h6>Others</h6>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm mb-4">
+                    <ul class="list-group list-group-flush bg-none">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-auto pr-0 align-self-center text-end">
+                                    <div class="form-check form-switch">
+                                        <input ngModel class="form-check-input" type="checkbox" name="visibility" value="false" id="visibility">
+                                        <label class="form-check-label" for="visibility"></label>
+                                        <p class="text invalid-feedback" *ngIf="formError['visibility']">{{formError['visibility']}}</p>
+                                    </div>
+                                </div>
+                                <div class="col ps-0">
+                                    <h6 class="mb-1">Visibility</h6>
+                                    <p class="text-muted small">Show/Hide co-operative from public and search list</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row h-100 ">
+            <div class="col-12 mb-4">
+                <button class="btn btn-default btn-lg w-100" type="submit">Save & Continue</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div *ngIf="secondStage">
+    <div class="row mb-3">
+        <div class="col">
+            <h3>Upload necessary documents</h3>
+        </div>
+    </div>
+
+    
+    <div class="row mb-3">
+        <div class="col">
+            <h6></h6>
+        </div>
+    </div>
+    <form #secondStageForm="ngForm" (submit)="continue(secondStageForm)">
+        <div class="row h-100 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="col">
+                    <h6 class="size-18">CAC Registration</h6>
+                </div>
+                <div class="form-group form-floating">
+                    <input ngModel required type="file" name="cacCertificate" hidden (change)="fnameDisplay.click()" class="form-control d-none" #cacupload id="cacupload" accept="image/*">
+                    <span class="btn btn-outline-secondary btn-sm" (click)="cacupload.click()">Upload CAC Registration</span><br>
+                    <span #fnameDisplay class="text text-decoration-underline text-color-theme text-wrap">{{cacupload.value.replace('C:\\fakepath\\', '')}}</span>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="col">
+                    <h6 class="size-18">Other document</h6>
+                </div>
+                <div class="form-group form-floating">
+                    <input ngModel required type="file" name="otherDocument" hidden (change)="fnameDisplay.click()" class="form-control d-none" #docupload id="docupload" accept="image/*">
+                    <span class="btn btn-outline-secondary btn-sm" (click)="docupload.click()">Upload document</span><br>
+                    <span #fnameDisplay class="text text-decoration-underline text-color-theme text-wrap">{{docupload.value.replace('C:\\fakepath\\', '')}}</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row h-100 ">
+            <div class="col-12 mb-4">
+                <button class="btn btn-default btn-lg w-100">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<div *ngIf="thirdStage">
+        <div class="row mb-3">
+            <div class="col">
+                <h3>Invite other executives to the coop</h3>
+                <p class="text small">A coop needs to have  four (4) executives.</p>
+                <p class="text small">To invite a person as executive, put their email or their coop username under position you want them to occupy and click invite</p>
+                <p class="text small">If invited user accepts the invite to an executive, that position is filled and shows "accepted" else it shows "declined".</p>
+                <p class="text small">You will be able to submit co-operative for approval when all four (4) executives are filled.</p>
+            </div>
+        </div>
+
+        
+    <form #thirdStageForm="ngForm" (submit)="continue(thirdStageForm)">
+        <div class="row mb-3">
+            <div class="col">
+                <h6></h6>
+            </div>
+        </div>
+        <div class="row h-100 mb-4">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="col">
+                    <h6 class="size-18">Vice-Chairperson</h6>
+                    <p class="text small mb-1">This person shall have the same roles and privileges as you.</p>
+                </div>
+                <div class="input-group form-group form-floating">
+                    <input ngModel required type="text" name="chairman" class="form-control" value="" placeholder="" id="ViceChairperson">
+                    <label for="ViceChairperson">Email</label>
+                    <button class="btn btn-success text-white">Invite</button>
+                </div>
+                <span class="">Cancel Invite</span>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="col">
+                    <h6 class="size-18">Secretary</h6>
+                    <p class="text small mb-1">This person shall serve notice of meetings among other roles</p>
+                </div>
+                <div class="input-group form-group form-floating">
+                    <input ngModel required disabled type="text" name="viceChairman" class="form-control" value="" placeholder="" id="secretary">
+                    <label for="secretary">Email</label>
+                    <button disabled class="btn btn-success text-white">Invite sent</button>
+                </div>
+                <span class="">Cancel Invite</span>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <div class="col">
+                    <h6 class="size-18">Financial Secretary</h6>
+                    <p class="text small mb-1">This person shall monitor financial operations</p>
+                </div>
+                <div class="input-group disabled form-group form-floating">
+                    <input ngModel required type="text" name="finSec" class="form-control" value="" placeholder="" id="fin-sec">
+                    <label for="fin-sec">Email</label>
+                    <button class="btn btn-success text-white">Invite</button>
+                </div>
+                <span class="">Cancel Invite</span>
+            </div>
+        </div>
+        
+        <div class="row h-100 ">
+            <div class="col-12 mb-4">
+                <button class="btn btn-default btn-lg w-100">Continue</button>
+            </div>
+        </div>
+    </form>
+</div>

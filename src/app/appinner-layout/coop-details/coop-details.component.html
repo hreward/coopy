@@ -1,0 +1,233 @@
+<div class="row mb-4 position-relative bg-dark text-white py-4">
+    <div class="position-absolute start-0 top-0 coverimg h-100 w-100 opacity-5 z-index-0"
+        style="background-image: url('assets/img/banner.jpg');">
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mx-auto align-self-center z-index-1 text-center">
+        <div class="avatar avatar-80 rounded mx-auto theme-bg border border-3 mb-3">
+            <i class="bi bi-card-image size-32"></i>
+        </div>
+
+        <h4 class=" mb-2">Meet People, Meet the Team</h4>
+        <p class="text-center small">Find desired people profile here.</p>
+    </div>
+</div>
+
+<!-- Stats and connections -->
+<div class="row mb-4 text-center py-4 bg-theme-light">
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0">{{25000 | currency:'NGN'}}</h6>
+        <p class="text-muted small">Share Capital</p>
+    </div>
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0">5%</h6>
+        <p class="text-muted small">Loan Interest</p>
+    </div>
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0">{{1500 | currency:'NGN'}}</h6>
+        <p class="text-muted small">Registration Fee</p>
+    </div>
+</div>
+<!-- Stats and connections -->
+<div class="row mb-4 text-center pt-4 bg-theme-light">
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0 text-break">{{2500000 | currency:'NGN'}}</h6>
+        <p class="text-muted small">Saving Balance</p>
+    </div>
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0 text-break">{{25000 | currency:'NGN'}}</h6>
+        <p class="text-muted small">Share Balance</p>
+    </div>
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0 text-break">5%</h6>
+        <p class="text-muted small">Loan Interest</p>
+    </div>
+    <div class="col-6 col-md-6 col-lg-4 mb-3">
+        <h6 class="mb-0 text-break">{{2500000000 | currency:'NGN'}}</h6>
+        <p class="text-muted small">Liquidity</p>
+    </div>
+</div>
+
+<!-- connection -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Your contributions (Calendar)</h6>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-12">
+        <full-calendar #calendarEl [options]="calendarOptions"></full-calendar>
+    </div>
+</div>
+
+
+<!-- connection -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Co-operative members</h6>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-12 px-0">
+        <!-- swiper users connections -->
+        <swiper class="connectionwiper" [slidesPerView]="'auto'" [spaceBetween]="0" [pagination]="false">
+            <ng-template swiperSlide>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
+                            <img src="assets/img/user4.jpg" alt="">
+                        </figure>
+                        <p class="text-color-theme size-12 small">Nicolas</p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
+                            <img src="assets/img/user2.jpg" alt="">
+                        </figure>
+                        <p class="text-color-theme size-12 small">Shelvey</p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
+                            <img src="assets/img/user3.jpg" alt="">
+                        </figure>
+                        <p class="text-color-theme size-12 small">Amenda</p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card text-center">
+                    <div class="card-body">
+                        <figure class="avatar avatar-50 shadow-sm mb-1 rounded-10">
+                            <img src="assets/img/user1.jpg" alt="">
+                        </figure>
+                        <p class="text-color-theme size-12 small">RXL15</p>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide class="align-self-center">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <p class="text-color-theme size-12 small">+12 more</p>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+
+
+<!-- executives -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Co-operative Executives</h6>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-12 px-0">
+        <ul class="list-group list-group-flush bg-none">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="form-check avatar">
+                            <input class="form-check-input bg-success border-0" type="checkbox" checked="" disabled id="contact11">
+                            <label for="contact11" class="avatar avatar-44 shadow-sm rounded-10">
+                                <img src="assets/img/user1.jpg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-1 text-color-theme">Nicolas A.</p>
+                        <p class="text-muted small">Chairman</p>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-default btn-44 shadow-sm">
+                            <i class="bi bi-arrow-up-right-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="form-check avatar">
+                            <input type="checkbox" disabled id="contact12" checked="" class="form-check-input bg-success border-0">
+                            <label for="contact12" class="avatar avatar-44 shadow-sm rounded-10">
+                                <img src="assets/img/user2.jpg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-1 text-color-theme">Alicia D.</p>
+                        <p class="text-muted small">Vice Chairman</p>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-default btn-44 shadow-sm">
+                            <i class="bi bi-arrow-up-right-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="form-check avatar">
+                            <input class="form-check-input bg-success border-0" type="checkbox" checked="" disabled id="contact13">
+                            <label for="contact13" class="avatar avatar-44 shadow-sm rounded-10">
+                                <img src="assets/img/user3.jpg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-1 text-color-theme">Christina G.</p>
+                        <p class="text-muted small">Secretary</p>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-default btn-44 shadow-sm">
+                            <i class="bi bi-arrow-up-right-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="form-check avatar">
+                            <input class="form-check-input bg-success border-0" type="checkbox" checked="" disabled id="contact14">
+                            <label for="contact14" class="avatar avatar-44 shadow-sm rounded-10">
+                                <img src="assets/img/user4.jpg" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-1 text-color-theme">John P.</p>
+                        <p class="text-muted small">Financial Secretary</p>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-default btn-44 shadow-sm">
+                            <i class="bi bi-arrow-up-right-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-12 mb-2">
+        <button class="btn btn-default btn-lg w-100">Join</button>
+    </div>
+    <div class="col-12 mb-2">
+        <button class="btn btn-danger btn-lg w-100">Leave</button>
+    </div>
+    <div class="col-12 mb-2 text-center">
+        <a href="javascript:void(0);" class="link-danger">Report Coop</a>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+<!-- select Amount -->
+<div class="row">
+    <div class="col-12 text-center mb-4">
+        <div class="text-center"><span class="text-muted">Amount</span>
+        <input type="tel" (blur)="currencyPiping()" class="text-center transparent-input border-2 border-primary border-dashed" [(ngModel)]="amount" placeholder="Enter Amount"></div>
+    </div>
+</div>
+
+<!-- Saving targets -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Pay from</h6>
+    </div>
+    <div class="col-auto">
+        <a href="javascript:void();" class="small">Add New</a>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-12 px-0">
+        <swiper class="cardswiper" [slidesPerView]="'auto'" [spaceBetween]="0" [pagination]="false">
+            <ng-template swiperSlide>
+                <div class="card {{isVisited==true ? 'selected ':''}}" (click)="checkVisited()">
+                    <div class="card-body">
+                        <div class="form-check position-absolute end-0 bottom-0 m-1">
+                            <input class="form-check-input rounded-circle" name="cardselect" type="radio" id="card1">
+                            <label for="card1" class="form-check-label"></label>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-auto align-self-center">
+                                <img src="assets/img/masterocard.png" alt="">
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="small">
+                                    <span class="text-uppercase size-10">Validity</span><br>
+                                    <span class="text-muted">09/24</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="fw-normal mb-2">
+                                    150540.00
+                                    <span class="small text-muted">USD</span>
+                                </h4>
+                                <p class="mb-0 text-muted size-12">10141 0021 0001 0154</p>
+                                <p class="text-muted size-12">Debit Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card dark-bg {{isVisited==true ? 'selected':''}}" (click)="checkVisited()">
+                    <div class="card-body">
+                        <div class="form-check position-absolute end-0 bottom-0 m-1">
+                            <input class="form-check-input rounded-circle" name="cardselect" type="radio" id="card2">
+                            <label for="card2" class="form-check-label"></label>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-auto align-self-center">
+                                <img src="assets/img/masterocard.png" alt="">
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="small">
+                                    <span class="text-uppercase size-10">Validity</span><br>
+                                    <span class="text-muted">06/25</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="fw-normal mb-2">
+                                    56040.00
+                                    <span class="small text-muted">USD</span>
+                                </h4>
+                                <p class="mb-0 text-muted size-12">10141 0021 0001 0154</p>
+                                <p class="text-muted size-12">Debit Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card theme-radial-gradient {{isVisited==true ? 'selected':''}}" (click)="checkVisited()">
+                    <div class="card-body">
+                        <div class="form-check position-absolute end-0 bottom-0 m-1">
+                            <input class="form-check-input rounded-circle" name="cardselect" type="radio" id="card3">
+                            <label for="card3" class="form-check-label"></label>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-auto align-self-center">
+                                <i class="bi bi-wallet2"></i> Crypto
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <p class="small">
+                                    <span class="text-uppercase size-10">Validity</span><br>
+                                    <span class="text-muted">Unlimited</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="fw-normal mb-2">
+                                    100.00
+                                    <span class="small text-muted">BTC</span>
+                                </h4>
+                                <p class="mb-0 text-muted size-12">10141 0021 0001 0154</p>
+                                <p class="text-muted size-12">Account</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+
+<div class="row mb-4">
+    <div class="col-12 ">
+        <button class="btn btn-default btn-lg shadow-sm w-100" (click)="addFund()">
+            Add to Wallet
+        </button>
+    </div>
+</div>

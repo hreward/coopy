@@ -1,0 +1,506 @@
+<!-- welcome user -->
+<div class="row mb-4">
+    <div class="col-auto">
+        <div class="avatar avatar-50 shadow rounded-10">
+            <img src="assets/img/user1.jpg" alt="">
+        </div>
+    </div>
+    <div class="col align-self-center ps-0">
+        <h4 class="text-color-theme"><span class="fw-normal">Hi</span>, Reward</h4>
+        <p class="text-muted">Good Morning</p>
+    </div>
+</div>
+
+<!-- money request received -->
+<div class="row mb-4 hideonprogress">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="avatar avatar-44 shadow-sm rounded-10">
+                            <img src="assets/img/user3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="small mb-1"><a routerLink="/profile" class="fw-medium">Shelvey</a> <span
+                                class="text-muted">requested money</span></p>
+                        <p>150 <span class="text-muted">$</span> <small class="text-muted">1 min ago</small>
+                        </p>
+                    </div>
+                    <div class="col-auto">
+                        <button class="btn btn-44 btn-default shadow-sm">
+                            <i class="bi bi-arrow-up-right-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-0">
+                <div class="col-12">
+                    <div class="progress bg-none h-2 hideonprogressbar" data-target="hideonprogress">
+                        <div class="progress-bar bg-theme" role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                            aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Quick numbers stats -->
+
+<div class="col-12 col-md-6">
+    <div class="row">
+        <div class="col-6 col-md-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="avatar avatar-40 alert-success text-success rounded-circle">
+                                <i class="bi bi-arrow-down-left-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col px-0 align-self-center">
+                            <p class="text-muted size-16 mb-0">Wallet</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>{{1544 | currency:'N'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="avatar avatar-40 alert-danger text-danger rounded-circle">
+                                <i class="bi bi-arrow-down-right-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col px-0 align-self-center">
+                            <p class="text-muted size-16 mb-0">In coop</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>{{1424 | currency:'N'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="avatar avatar-40 alert-primary text-primary rounded-circle">
+                                <i class="bi bi-arrow-down-left-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col px-0 align-self-center">
+                            <p class="text-muted size-16 mb-0">Stash</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>{{1600 | currency:'N'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="avatar avatar-40 alert-warning text-warning rounded-circle">
+                                <i class="bi bi-arrow-down-right-circle"></i>
+                            </div>
+                        </div>
+                        <div class="col px-0 align-self-center">
+                            <p class="text-muted size-12 mb-0">Loan</p>
+                        </div>
+                        <div class="col text-center">
+                            <p>{{0 | currency:'N'}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- swiper coops -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Coops you belong to</h6>
+    </div>
+    <div class="col-auto align-self-center">
+        <a routerLink="/in-coops" class="small">See More</a>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-12 px-0">
+        <swiper class="cardswiper" [slidesPerView]="'auto'" [spaceBetween]="0" [pagination]="false">
+            <ng-template swiperSlide>
+                <a class="card" [routerLink]="[ '/coops', 488377292747 ]">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-auto align-self-center">
+                                <p class="small">
+                                    <span class="text-uppercase size-10">Coop ID</span><br>
+                                    <span class="text-muted">488377292747</span>
+                                </p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                                    <img src="assets/img/company3.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="fw-normal mb-2 text-truncate">
+                                    Emmanuel Farmers MPCS, Ogedegbe, Warri, Delta.
+                                </h4>
+                                <p class="mb-0 text-muted size-12">10141 0021 0001 0154</p>
+                                <p class="text-muted size-12">Debit Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card dark-bg">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-auto align-self-center">
+                                <p class="small">
+                                    <span class="text-uppercase size-10">Coop ID</span><br>
+                                    <span class="text-muted">8846764884</span>
+                                </p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                                    <img src="assets/img/company4.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="fw-normal mb-2 text-truncate">
+                                    Shell Staff of Warri Rig CS, Warri, Delta State
+                                </h4>
+                                <p class="mb-0 text-muted size-12">10141 0021 0001 0154</p>
+                                <p class="text-muted size-12">Debit Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="card theme-radial-gradient border-0">
+                    <div class="card-body">
+                        <div class="row mb-3">
+                            <div class="col-auto align-self-center">
+                                <p class="small">
+                                    <span class="text-uppercase size-10">Coop ID</span><br>
+                                    <span class="text-muted">35454676943</span>
+                                </p>
+                            </div>
+                            <div class="col align-self-center text-end">
+                                <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                                    <img src="assets/img/company2-50.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="fw-normal mb-2 text-truncate">
+                                    Okwagbe Secondary School Co-operative Society, USLG, Delta State.
+                                </h4>
+                                <p class="mb-0 text-muted size-12">10141 0021 0001 0154</p>
+                                <p class="text-muted size-12">Debit Card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+
+<!-- offers banner -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card theme-bg text-center">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <h1>15% OFF</h1>
+                        <p class="size-12 text-muted">
+                            On every bill pay, launch offer get 5% Extra
+                        </p>
+                        <div class="tag border-dashed border-opac">
+                            BILLPAY15OFF
+                        </div>
+                    </div>
+                    <div class="col-6 align-self-center ps-0">
+                        <img src="assets/img/offergraphics.png" alt="" class="mw-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Coops you administer -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Coops you administer</h6>
+    </div>
+    <div class="col-auto align-self-center d-none">
+        <a routerLink="/" class="small">Read more</a>
+    </div>
+</div>
+<div class="row mb-1 justify-content-center">
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-auto align-self-center">
+                        <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                            <img src="assets/img/company2-50.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-0 text-color-theme">20<small>% Off</small></p>
+                        <div class="tag bg-warning border-warning text-white py-1 px-2">50 pts</div>
+                    </div>
+                </div>
+                <p class="size-12">
+                    <span class="text-muted">minimum spend 1220 USD and maximum discount 240 USD</span>
+                    <a href="">view details</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-auto align-self-center">
+                        <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                            <img src="assets/img/company4.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-0 text-color-theme">60<small>% Off</small></p>
+                        <div class="tag bg-warning border-warning text-white py-1 px-2">100 pts</div>
+                    </div>
+                </div>
+                <p class="size-12">
+                    <span class="text-muted">minimum spend 4520 USD and maximum discount 600 USD</span>
+                    <a href="">view details</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-auto align-self-center">
+                        <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                            <img src="assets/img/company2-50.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-0 text-color-theme">17<small>% Off</small></p>
+                        <div class="tag bg-warning border-warning text-white py-1 px-2">250 pts</div>
+                    </div>
+                </div>
+                <p class="size-12">
+                    <span class="text-muted">minimum spend 1220 USD and maximum discount 480 USD</span>
+                    <a href="">view details</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-auto align-self-center">
+                        <div class="avatar avatar-40 bg-warning text-white shadow-sm rounded-10">
+                            <img src="assets/img/company3.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="mb-0 text-color-theme">55<small>% Off</small></p>
+                        <div class="tag bg-warning border-warning text-white py-1 px-2">150 pts</div>
+                    </div>
+                </div>
+                <p class="size-12">
+                    <span class="text-muted">minimum spend 4520 USD and maximum discount 680 USD</span>
+                    <a href="">view details</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Dark mode switch -->
+<div class="row mb-4">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkmodeswitch" (click)="darkModeSwitch()">
+                    <label class="form-check-label text-muted px-2 " for="darkmodeswitch">Activate Dark
+                        Mode</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Transactions -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">Transactions<br><small class="fw-normal text-muted">10 Recent tranx</small>
+        </h6>
+    </div>
+    <div class="col-auto align-self-center">
+        <a routerLink="/transactions" class="small">View all</a>
+    </div>
+</div>
+<div class="row mb-4">
+    <div class="col-12 px-0">
+        <ul class="list-group list-group-flush bg-none">
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <p class="text-color-theme mb-0">Zomato</p>
+                        <p class="text-muted size-12">Food</p>
+                    </div>
+                    <div class="col align-self-center text-end">
+                        <p class="mb-0">-25.00</p>
+                        <p class="text-muted size-12">Debit Card 4545</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <p class="text-color-theme mb-0">Uber</p>
+                        <p class="text-muted size-12">Travel</p>
+                    </div>
+                    <div class="col align-self-center text-end">
+                        <p class="mb-0">-26.00</p>
+                        <p class="text-muted size-12">Debit Card 4545</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <p class="text-color-theme mb-0">Starbucks</p>
+                        <p class="text-muted size-12">Food</p>
+                    </div>
+                    <div class="col align-self-center text-end">
+                        <p class="mb-0">-18.00</p>
+                        <p class="text-muted size-12">Cash</p>
+                    </div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col align-self-center">
+                        <p class="text-color-theme mb-0">Walmart</p>
+                        <p class="text-muted size-12">Clothing</p>
+                    </div>
+                    <div class="col align-self-center text-end">
+                        <p class="mb-0">-105.00</p>
+                        <p class="text-muted size-12">Wallet</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Blogs -->
+<div class="row mb-3">
+    <div class="col">
+        <h6 class="title">News and Articles</h6>
+    </div>
+    <div class="col-auto align-self-center">
+        <a routerLink="/blog" class="small">Read more</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+        <a routerLink="/blog-details" class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="avatar avatar-60 shadow-sm rounded-10 coverimg" style="background-image: url('assets/img/news.jpg');">
+                            <img src="assets/img/news.jpg" alt="" class="d-none">
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="text-color-theme mb-1">Do share and Earn a lot</p>
+                        <p class="text-muted size-12">Get $10 instant as reward while your friend or invited member join Coop</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <a routerLink="/blog-details" class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="avatar avatar-60 shadow-sm rounded-10 coverimg" style="background-image: url('assets/img/news1.jpg');">
+                            <img src="assets/img/news1.jpg" alt="" class="d-none">
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="text-color-theme mb-1">Walmart news latest picks</p>
+                        <p class="text-muted size-12">Get $10 instant as reward while your friend or invited member join coop</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <a routerLink="/blog-details" class="card mb-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-auto">
+                        <div class="avatar avatar-60 shadow-sm rounded-10 coverimg"  style="background-image: url('assets/img/news2.jpg');">
+                            <img src="assets/img/news2.jpg" alt="" class="d-none">
+                        </div>
+                    </div>
+                    <div class="col align-self-center ps-0">
+                        <p class="text-color-theme mb-1">Do share and Help us</p>
+                        <p class="text-muted size-12">Get $10 instant as reward while your friend or invited member join coop</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

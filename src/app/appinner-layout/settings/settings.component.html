@@ -1,0 +1,176 @@
+<!-- profile information -->
+<div class="row mb-3">
+    <div class="col">
+        <h6>Basic Information</h6>
+    </div>
+</div>
+<div class="row h-100 mb-4">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-group form-floating  mb-3">
+            <input type="text" class="form-control" value="Reward" placeholder="Name" id="names">
+            <label for="names">First Name</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-group form-floating  mb-3">
+            <input type="text" class="form-control" value="Doe" placeholder="Surname" id="surnames">
+            <label for="surnames">Last Name (Surname)</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-group form-floating mb-3">
+            <input type="text" class="form-control" value="hallreward@gmail.com"
+                placeholder="Email" id="email">
+            <label for="email">Email</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-group form-floating mb-3">
+            <input type="text" class="form-control" value="+2348127126101"
+                placeholder="Phone" id="phone">
+            <label for="phone">Phone</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-group form-floating mb-3">
+            <textarea class="form-control" id="fin-goal" placeholder="Financial goal">To have N1m in coop assets and be able borrow extra to help fund my textile business by 2026</textarea>
+            <label for="fin-goal">Financial goal</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <label for="fileupload">Profile Image</label>
+        <div class="form-group form-floating">
+            <input type="file" hidden class="form-control d-none" #fileupload id="fileupload" accept="image/*">
+            <img class="img-fluid rounded rounded-5 border border-3" width="75px" height="75px" src="" (click)="fileupload.click()">
+        </div>
+    </div>
+</div>
+
+<!-- add edit address form -->
+<div class="row mb-3">
+    <div class="col">
+        <h6>Address</h6>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="form-floating mb-3">
+            <select class="form-control" id="country">
+                <option selected>Nigeria (+234)</option>
+            </select>
+            <label for="country">Country</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="form-group form-floating">
+            <input type="text" class="form-control" value="" id="address5"
+                placeholder="Select State">
+            <label class="form-control-label" for="address5">State</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="form-group form-floating">
+            <input type="text" class="form-control" value="Warri" id="address6" placeholder="City">
+            <label class="form-control-label" for="address6">City</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 mb-3">
+        <div class="form-group form-floating">
+            <input type="text" class="form-control" value="22 Jakpa Junction Rd" id="address2"
+                placeholder="Address Line 1">
+            <label class="form-control-label" for="address2">Address Line 1</label>
+        </div>
+    </div>
+</div>
+
+<!-- change password -->
+<div class="row mb-3">
+    <div class="col">
+        <h6>Change Password</h6>
+    </div>
+</div>
+<div class="row h-100 mb-4">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-floating  mb-3">
+            <input type="password" class="form-control" value="" placeholder="Password"
+                id="password">
+            <label for="password">Current Password</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-floating  mb-3">
+            <input type="password" class="form-control" value="" placeholder="Password"
+                id="password">
+            <label for="password">New Password</label>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="form-floating ">
+            <input type="password" class="form-control" placeholder="Confirm Password" id="confirmpassword">
+            <label for="confirmpassword">Confirm New Password</label>
+        </div>
+    </div>
+</div>
+
+<!-- Email Notifications settings -->
+<div class="row mb-3">
+    <div class="col">
+        <h6>Others</h6>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow-sm mb-4">
+            <ul class="list-group list-group-flush bg-none">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-auto pr-0 align-self-center text-end">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="settingscheck1" checked>
+                                <label class="form-check-label" for="settingscheck1"></label>
+                            </div>
+                        </div>
+                        <div class="col ps-0">
+                            <h6 class="mb-1">Email Notification</h6>
+                            <p class="text-muted small">All notification will be sent</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-auto pr-0 align-self-center text-end">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="settingscheck2" checked>
+                                <label class="form-check-label" for="settingscheck2"></label>
+                            </div>
+                        </div>
+                        <div class="col ps-0">
+                            <h6 class="mb-1">SMS Notification</h6>
+                            <p class="text-muted small">Receive SMS notification of monthly account summary</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-auto pr-0 align-self-center text-end">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="settingscheck3">
+                                <label class="form-check-label" for="settingscheck3"></label>
+                            </div>
+                        </div>
+                        <div class="col ps-0">
+                            <h6 class="mb-1">Profile Visibility</h6>
+                            <p class="text-muted small">Show/Hide your membership on co-operative members' list</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row h-100 ">
+    <div class="col-12 mb-4">
+        <button (click)="updateSettings()" class="btn btn-default btn-lg w-100">Update</button>
+    </div>
+</div>
