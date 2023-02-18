@@ -74,6 +74,7 @@ export class CreatecoopComponent {
 		this.coopService.createCoop(values).subscribe({
 			next: (data)=>{
 				if(data.status==true && data.success==true){
+					if(data.message) this.toast.info(data.message);
 					console.log(data);
 					this.firstStage = false;
 					this.thirdStage = false;
